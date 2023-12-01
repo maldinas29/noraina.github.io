@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #fb607f;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/belakang.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%; 
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.header.song p{
+    margin-top: -100%;
+}
+
+.logo{
+	color: #ffffff;
+	font-size: 35px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+.logo span {
+    color: #e4007c;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text p span{
+    color: #e2c98f;
+}
+/*------------------about---------------*/
+#about{
+    padding: 80px 0;
+    color: white;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: blueviolet;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px o;
+}
+.tab-contents ul li span{
+    color: darkred;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/*--------------portfolio----------------*/
+#myachievement{
+    padding: 50px 0;
+    background: #ff91a4;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.main-text{
+	text-align: center;
+}
+.main-text p{
+	color: #ccc;
+	font-size: 15px;
+	margin-bottom: 15px;
+}
+.main-text h2{
+	font-size: 50px;
+	line-height: 1;
+}
+.main-text h2 span{
+    font-size: 50px;
+	line-height: 1;
+	color: rgb(24, 24, 24);
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.myachievement-content{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+	align-items: center;
+	gap: 3.5rem;
+	margin-top: 5rem;
+}
+.myachievement-content{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+	align-items: center;
+	gap: 3.5rem;
+	margin-top: 5rem;
+}
+.box{
+	background: rgb(100, 95, 97);
+	padding: 50px 45px;
+	border-radius: 8px;
+	transition: all .45s ease;
+}
+.img i{
+	font-size: 32px;
+	margin-bottom: 20px;
+}
+.box h3{
+	font-size: 24px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 15px;
+}
+.box p{
+	color: #ccc;
+	font-size: 1rem;
+	line-height: 1.8;
+	margin-bottom: 25px;
+}
+.read{
+	display: inline-block;
+	padding: 8px 18px;
+	background:  #ff69b4;
+	color: #494848;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 8px;
+	transition: all .45s ease;
+}
+.read:hover{
+	letter-spacing: 1px;
+	background: #ffffff99;
+	color: #fff;
+}
+.box:hover{
+	transform: translateY(-8px);
+	cursor: pointer;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid yellow;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: yellow;
+}
+
+/*------------contact----------*/
+.contact{
+	background: #fb607f;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: 2.5rem;
+}
+.contact-left h4{
+	color: #fff;
+	margin: 18px 0;
+	font-size: 20px;
+	font-weight: 600;
+}
+.contact-left h2{
+	font-size: 40px;
+	line-height: 1;
+}
+.contact-left h2 span{
+    color: #ff004f;
+}
+.contact-left p{
+	color: #ccc;
+	font-size: var(--p-font);
+	line-height: 1.8;
+	margin-bottom: 30px;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.sub-title h1{
+    font-size: var(--h2-font);
+	line-height: 1;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-right{
+	position: relative;
+}
+.contact-right input,textarea{
+	width: 100%;
+	padding: 14px;
+	background: #ECE3CE;
+	color: #fff;
+	border: none;
+	outline: none;
+	font-size: 15px;
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: blueviolet;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    height: 45px;
+	width: 45px;
+	background: #FFE5B4;
+	color: #494848;
+	font-size: 22px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	margin-right: 15px;
+	transition: all .45s ease;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translate(-5px);
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rosybrown;
+    font-weight: 300;
+    margin-top: 20px;
+}
+  /*----------scrollup-----------*/
+
+  #scrollup {
+	position: fixed;
+	margin-top: 20px;
+	color: #000000;
+	text-decoration: none;
+	font-size: 22px;
+	line-height: 50px;
+	background: #FFFFFF;
+	width: 50px;
+	height: 50px;
+	bottom: 40px;
+	right: 50px;
+	border-radius: 50%;
+	text-align: center;
+}
+#scrollup:hover {
+  background-color: #555;
+  cursor: pointer;  
+}
+
+
+/*--------------- css for small screens---------------*/
+nav .fas{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(img/phonebeya.png);
+    }
+    .header-text{
+        margin-top: 120%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: gray;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left{
+        flex-basis: 70%;
+    }
+    .contact-right{
+        margin-top: 20px;
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 10px;
+    }
+}

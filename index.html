@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+		h1 span {
+    color: #ffb4d7;
+    position: relative;
+}
+h1 span::before {
+    content: "";
+    height: 30px;
+    width: 2px;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    background: #FFE5B4;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+}
+h1 span.stop-blinking::before {
+    animation: none;
+}
+@keyframes blink {
+    50% { opacity: 0 }
+}
+	</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyya Website</title>
+    <link rel="stylesheet" href="style.css">
+
+	 <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<script src="js/script.js" defer></script>
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+   		(function(){
+      		emailjs.init("10o5DkguHm_8FOz9f");
+   	})();
+	</script>
+<script src="https://kit.fontawesome.com/5206b5bd17.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo"><span>Aina</span>Nabilah</a>
+                <ul id="sidemenu">
+                    <li><a href="#home" >Home</a></li>
+			        <li><a href="#about" >About Me</a></li>
+			        <li><a href="#myachievement">My Project</a></li>
+			        <li><a href="#contact">Contact</a></li>
+                    <li id="close-icon" style="display: none;"></li><i class="fas fa-times" onclick="closemenu()"></i>
+                    </li>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Welcome to My<br>Portfolio Everyone !</h1>
+                <p><span></span></p>
+            </div>
+            <div class="song">
+                <div class="left-col">
+                    <p>Click Here To Listen</p>
+                    <img src="img/play.png" id="icon">
+                    
+                </div>
+            </div>	
+            </div>
+        </div>
+    
+        <audio id="mySong">	
+            <source src="img/song.mp3" type="audio/mp3">		
+        </audio>
+        </div>
+    </div>
+    
+    <!-------------about------------>
+    <div id="about">
+		<div class="container">
+			<div class="row">
+				<div class="about-col-1">
+					<img src="img/pipi.jpg">
+				</div>
+				<div class="about-col-2">
+					<h1 class="sub-title">About Me</h1>
+					<p>My name is Siti NorAina Nabilah Binti Roslan. Born in Kluang, 
+						Johor. I am 21 years old in 2023. I am the 2nd child of six siblings.
+						Lives in kluang, Johor.Receive my early education at Tadika PASTI and 
+						continued my studies at Sekolah Kebangsaan Taman Kluang Barat followed by Sekolah Menengah Taman Sri Kluang.
+						After finishing school, I continued my studies at Universiti Sultan Zainal Abidin, Besut, Terengganu starting
+						 from 2022 until 2025 in the field of Information Technology Internet Computing</p>
+
+						 <div class="tab-titles">
+							<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+							<p class="tab-links" onclick="opentab('experience')">Experience</p>
+							<p class="tab-links" onclick="opentab('education')">Education</p>
+						 </div>
+						 <div class="tab-contents active-tab" id="skills">
+							<ul>
+								<li><span>HyperText Markup Language (HTML)</span><br>Designer application and website</li>
+                                <li><span>Cascading style sheet</span><br>Have an creative ideas for making a interface.</li>
+                                <li><span>Javascript</span><br>able to identify and solve problems that arise during the development process.</li>
+							</ul>
+						 </div>
+						 <div class="tab-contents" id="experience">
+							<ul>
+								<li><span>2023 - current</span><br>Designing a poster</li>
+                             <li><span>2022 - 2023</span><br>Making a short film</li>
+                            <li><span>2020-2022</span><br>Teaching spm student</li>
+							</ul>
+						 </div>
+						 <div class="tab-contents" id="education">
+							<ul>
+								<li><span>2023</span><br>Bachelor of INTERNET COMPUTING at Unisza</li>
+                            <li><span>2022</span><br>MATRICS COLLEGE AT NEGERI SEMBILAN</li>
+                            <li><span>2019</span><br>SPM AT SMK TAMAN SRI KLUANG</li>
+							</ul>
+						 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+   
+    <!------------------Portfolio--------------------->
+    <section class="myachievement" id="myachievement">
+		<div class="main-text">
+			<h2><span>My</span> Project</h2>
+		</div>
+
+		<div class="myachievement-content">
+			<div class="box">
+				<div class="img">
+					<img src="img/project1.jpg">
+				</div>
+				<h3>System</h3>
+				<p>Description.</p>
+				<a href="https://www.unisza.edu.my/" target="_blank"		class="read">Read More</a>
+			</div>
+
+			<div class="box">
+				<div class="s-icons">
+					<img src="img/project2.png">
+				</div>
+				<h3>Web Portfolio</h3>
+				<p>Description.</p>
+				<a href="https://www.unisza.edu.my/" target="_blank" class="read">Read More</a>
+			</div>
+
+			<div class="box">
+				<div class="s-icons">
+					<img src="img/project3.jpg">
+				</div>
+				<h3>Student Registration System</h3>
+				<p>Description.</p>
+				<a href="https://www.unisza.edu.my/" target="_blank" class="read">Read More</a>
+			</div>
+
+		</div>
+	</section>
+    <!--------------contact------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h2>Contact <span>Me!</span></h2>
+			        <h4>If You Have Any Question.</h4>
+			        <p>Feel free to ask me.</p>
+                    <p><i class="fa-solid fa-paper-plane"></i>sitinorainanabilahroslan@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+6011-2068 0303</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/aina.roslan.376?mibextid=ZbWKwL" target="_blank" ><i class='bx bxl-facebook' ></i></a>
+				<a href="https://instagram.com/ainanabilah_hjroslan?igshid=NGVhN2U2NjQ0Yg%3D%3D&utm_source=qr" target="_blank" ><i class='bx bxl-instagram-alt' ></i></a>
+				<a href="https://www.tiktok.com/@vanillatte__02?_t=8hifBRqmwhM&_r=1" target="_blank" ><i class='bx bxl-tiktok' ></i></a>
+                    </div>
+
+                </div>
+                <div class="contact-right">
+                        <input style="color: #201f1d;" id="name" type="text" placeholder="Your Name" required>
+				        <input style="color: #201f1d;" id="email_id" type="email" placeholder="Your Email Address" required>
+				        <textarea style="color: #201f1d;" id="message" cols="35" rows="10" placeholder="How Can I Help You" required></textarea>
+				        <input type="submit" onclick="SendEmail();" value="Send Message" class="submit" required>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © by Beyya</p>
+        </div>
+    </div>
+
+
+    <button onclick="topFunc()" id="scrollup" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.top = "-200";
+        }
+    </script>
+    <script>
+        function openmenu() {
+            document.getElementById("sidemenu").style.width = "400px";
+            document.getElementById("close-icon").style.display = "block";
+        }
+        function closemenu() {
+            document.getElementById("sidemenu").style.width = "0";
+            document.getElementById("close-icon").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
